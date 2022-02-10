@@ -1,16 +1,10 @@
 # first_project
 
-A new Flutter project.
 
-## Getting Started
+This is the very first mobile application written an interactive Flutter app that runs on iOS and Android by doing the following:
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Play with Dart code
+- Using hot reload for a faster development cycle
+- Using a stateful widget, adding interactivity
+- Create a route and add logic of the movement between  home and new route
+- Usage of theme and changing UI features and colors.
