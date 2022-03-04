@@ -1,7 +1,9 @@
 // ignore_for_file: prefer_const_constructors
+// @dart=2.9
 
 import 'package:expense_planner/transaction.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,7 +33,6 @@ class MyHomePage extends StatelessWidget {
     ),
   ];
 
-  get crossAxisAlignment => null;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +40,7 @@ class MyHomePage extends StatelessWidget {
           title: Text('Flutter App'),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          //mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
@@ -48,6 +49,31 @@ class MyHomePage extends StatelessWidget {
                 color: Colors.lightBlue,
                 child: Text('Chart!'),
                 elevation: 5,
+              ),
+            ),
+            Card(
+              elevation: 5,
+              child: Container(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Title'),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Amount'),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text('Add Item'),
+                      style: TextButton.styleFrom(
+                        primary: Colors.blue,
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
             Column(
@@ -84,7 +110,7 @@ class MyHomePage extends StatelessWidget {
                                 fontSize: 16, fontWeight: FontWeight.bold),
                           ),
                           Text(
-                            '${Transaction.date}',
+                            DateFormat.yMMMd().format(Transaction.date),
                             style: TextStyle(
                               color: Colors.grey,
                             ),
